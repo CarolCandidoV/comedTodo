@@ -1,0 +1,227 @@
+/* 
+*************************
+VARIBLES
+*************************
+*/
+
+:root {
+    --principal: #d35400;        /* naranja */
+    --principal-oscuro: #a84300;
+    --secundario: #27ae60;       /* verde */
+    --fondo: #fdf6ee;
+    --blanco: #ffffff;
+    --texto: #333333;
+    --borde: #e0d6cc;
+    --fila-par: #fbeee0;
+}
+
+/* 
+*************************
+BASE
+*************************
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: var(--principal-oscuro);
+}
+
+h2 {
+    border-bottom: 3px solid var(--principal);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* 
+*************************
+MENU DEL INDEX
+*************************
+*/
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+header li a {
+    display: block;
+    padding: 15px 25px;
+    background-color: var(--principal);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+header li a:hover {
+    background-color: var(--principal-oscuro);
+    color: var(--blanco);
+}
+
+/* 
+*************************
+ENLACES
+*************************
+*/
+
+a {
+    color: var(--principal);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--principal-oscuro);
+}
+
+/* 
+*************************
+TABLAS
+*************************
+*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid var(--borde);
+}
+
+th {
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 12px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--fila-par);
+}
+
+tbody tr:hover {
+    background-color: #f5dcc2;
+}
+
+/* 
+*************************
+FORMULARIOS
+*************************
+*/
+
+form {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    padding: 8px 10px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--principal);
+    box-shadow: 0 0 4px rgba(211, 84, 0, 0.4);
+}
+
+/* 
+*************************
+BOTONES
+*************************
+*/
+
+input[type="submit"],
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #1e8449;
+}
+
+/* 
+*************************
+ENLACES CREAR Y VOLVER
+*************************
+*/
+
+body > a {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 0 10px 10px 0;
+    background-color: var(--principal);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+body > a:hover {
+    background-color: var(--principal-oscuro);
+    color: var(--blanco);
+}

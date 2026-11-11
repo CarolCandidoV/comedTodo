@@ -1,0 +1,27 @@
+Indicaciones tarea 7.7 (Creación de tarea propia)
+
+- Crear un proyecto para una empresa.
+	- Ejemplo:
+	- Comida
+		- Nombre: comer de todo
+		- Seguimiento de pedidos (MySQL - Varias tablas)
+			- Proveedores(Id, Nombre, NIF)
+			- Entidad(Id, Nombre, NIF, dirección ,esCliente)
+			- Clientes(Id, Nombre, DNI)
+			- Productos(Id, nombre, idEntidad, categoría, stock, 					ingredientes)
+			- Pedidos(Id, IdDirec, idProducto, numero, fecha)
+			- Dirección (id, idEntidad, nombre, dirección, teléfono, 				mail, contacto, población, provincia, CP)
+
+HACER AJAX Y CRUD
+
+  1. Proveedores (AJAX)
+  2. Clientes(AJAX)
+  3. Productos (CRUD)
+  4. Pedidos(AJAX)
+  5. Direcciones (CRUD)
+
+Listado de todos los campos (Enlace para listar el que elijas)
+Ajax sobre todos los campos, menos los id
+
+SQL
+CREATE TABLE `comedtodo`.`entidad` (`id` VARCHAR NOT NULL AUTO_INCREMENT , `Nombre` VARCHAR(40) NOT NULL , `Nif` VARCHAR(9) NOT NULL , `esCliente` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
