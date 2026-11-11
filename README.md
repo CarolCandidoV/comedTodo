@@ -1,78 +1,30 @@
-\# Comed Todo
+# Comed Todo
 
+Proyecto de la asignatura de Desarrollo Web en Entorno Servidor (2º DAW).
 
+Es una web para llevar los pedidos de una empresa de comida. Se pueden gestionar productos, direcciones, clientes, proveedores y pedidos.
 
-Proyecto de Desarrollo Web en Entorno Servidor (2º DAW).
+## Qué tiene
 
-Gestión de productos, direcciones, clientes, proveedores y pedidos de una empresa de comida.
+- Productos: crear, listar, editar y eliminar.
+- Direcciones: crear, listar, editar y eliminar.
+- Clientes y proveedores: listado con AJAX y filtro por nombre y NIF. Los dos salen de la tabla entidad, según el campo esCliente.
+- Pedidos: listado con AJAX y filtro por número, fecha, dirección y producto.
 
+## Cómo ejecutarlo
 
+1. Copiar la carpeta comedTodo en C:\xampp\htdocs
+2. Arrancar Apache y MySQL desde XAMPP.
+3. En phpMyAdmin crear la base de datos comedtodo e importar el archivo comedtodo.sql
+4. Cambiar el usuario y la contraseña de MySQL en conexion.php si no son los mismos.
+5. Abrir http://localhost/comedTodo/index.php en el navegador.
 
-\- \*\*Productos y Direcciones:\*\* CRUD (crear, listar, editar, eliminar).
+## Carpetas
 
-\- \*\*Clientes, Proveedores y Pedidos:\*\* listados con AJAX (jQuery) y filtrado.
-
-
-
-\## Requisitos
-
-
-
-\- XAMPP (Apache + MySQL)
-
-\- Navegador web
-
-
-
-\## Cómo ejecutarlo
-
-
-
-1\. Copia la carpeta `comedTodo` dentro de `C:\\xampp\\htdocs\\`.
-
-2\. Abre el panel de XAMPP y arranca \*\*Apache\*\* y \*\*MySQL\*\*.
-
-3\. Entra en `http://localhost/phpmyadmin`, crea una base de datos llamada `comedtodo`
-
-&#x20;  e importa el archivo `comedtodo.sql`.
-
-4\. Revisa `conexion.php` y pon tu usuario y contraseña de MySQL:
-
-&#x20;  ```php
-
-&#x20;  $username = 'root';
-
-&#x20;  $password = 'tu\_contraseña';
-
-&#x20;  ```
-
-5\. Abre en el navegador: `http://localhost/comedTodo/index.php`
-
-
-
-\## Estructura
-
-
-
-```
-
-comedTodo/
-
-├── css/            → estilos.css (estilos comunes)
-
-├── direcciones/    → CRUD de direcciones
-
-├── entidad/        → listados AJAX de clientes y proveedores
-
-├── pedidos/        → listado AJAX de pedidos
-
-├── productos/      → CRUD de productos
-
-├── conexion.php    → conexión PDO a MySQL
-
-├── comedtodo.sql   → base de datos
-
-└── index.php       → menú principal
-
-```
-
+- css: estilos de la web
+- productos: CRUD de productos
+- direcciones: CRUD de direcciones
+- entidad: listados de clientes y proveedores
+- pedidos: listado de pedidos
+- conexion.php: conexión a la base de datos
+- comedtodo.sql: la base de datos para importar
